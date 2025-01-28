@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.models.Box;
 import com.repository.BoxRepository;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
+@CrossOrigin(origins = "http://localhost", maxAge = 3600, allowCredentials="true")
 @RestController
 @RequestMapping("/api/box")
 public class BoxController {

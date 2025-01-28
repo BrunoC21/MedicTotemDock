@@ -29,7 +29,7 @@ import com.repository.CitaRepository;
 import com.repository.TicketRepository;
 import com.repository.TotemRepository;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials = "true")
+@CrossOrigin(origins = "http://localhost", maxAge = 3600, allowCredentials = "true")
 @RestController
 @RequestMapping("/api/ticket")
 public class TicketController {

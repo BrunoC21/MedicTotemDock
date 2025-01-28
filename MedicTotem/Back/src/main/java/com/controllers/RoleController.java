@@ -19,7 +19,7 @@ import com.models.User;
 import com.repository.RoleRepository;
 import com.repository.UserRepository;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
+@CrossOrigin(origins = "http://localhost", maxAge = 3600, allowCredentials="true")
 @RestController
 @RequestMapping("/api/roles")
 public class RoleController {

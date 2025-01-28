@@ -24,7 +24,7 @@ import com.repository.BoxRepository;
 import com.repository.UserRepository;
 import com.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials="true")
+@CrossOrigin(origins = "http://localhost", maxAge = 3600, allowCredentials="true")
 @RestController
 @RequestMapping("/api/usuario") 
 public class UsuarioController {

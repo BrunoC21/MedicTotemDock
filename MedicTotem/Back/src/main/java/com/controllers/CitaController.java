@@ -22,7 +22,7 @@ import com.repository.CitaRepository;
 import com.security.services.UserDetailsImpl;
 import com.service.ExcelService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600, allowCredentials = "true")
+@CrossOrigin(origins = "http://localhost", maxAge = 3600, allowCredentials = "true")
 @RestController
 @RequestMapping("/api/cita")
 public class CitaController {
