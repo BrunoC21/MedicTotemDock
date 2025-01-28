@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./MedicTotemFront
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - medictotem-network
+
+  backend:
+    build:
+      context: ./MedicTotem/Back
+    ports:
+      - "8080:8080"  # Asignar un puerto diferente para evitar conflictos
+    environment:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/mi_base_de_datos
+      SPRING_DATASOURCE_USERNAME: usuario
+      SPRING_DATASOURCE_PASSWORD: contraseña
+    depends_on:
+      - database
+    networks:
+      - medictotem-network
+
+  database:
+    image: mariadb:10.5 # especifica una versión estable
+    container_name: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mi_base_de_datos
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: contraseña
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql # Usa la ruta correcta de MySQL
+    networks:
+      - medictotem-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: database
+      PMA_USER: usuario
+      PMA_PASSWORD: contraseña
+    ports:
+      - "8081:80"
+    depends_on:
+      - database
+    networks:
+      - medictotem-network
+
+volumes:
+  db_data:
+
+networks:
+  medictotem-network:
+    driver: bridge
