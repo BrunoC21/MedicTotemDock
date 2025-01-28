@@ -1,6 +1,0 @@
-FROM mariadb:10.5
-ENV MYSQL_ROOT_PASSWORD=root
-ENV MYSQL_DATABASE=mi_base_de_datos
-ENV MYSQL_USER=usuario
-ENV MYSQL_PASSWORD=contraseña
-EXPOSE 3306
