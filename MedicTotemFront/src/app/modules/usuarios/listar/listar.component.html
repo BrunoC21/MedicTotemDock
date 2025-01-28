@@ -1,0 +1,29 @@
+<h2>Lista de Usuarios</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre de Usuario</th>
+      <th>Email</th>
+      <th>Roles</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.username }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let rol of usuario.roles">{{ rol.name }}</li>
+        </ul>
+      </td>
+      <td>
+        <button (click)="adminRoles(usuario.id)">Administrar roles</button>
+        <button (click)="eliminarUsuario(usuario.id)">Eliminar usuario</button>
+      </td>
+    </tr>   
+  </tbody>
+</table>

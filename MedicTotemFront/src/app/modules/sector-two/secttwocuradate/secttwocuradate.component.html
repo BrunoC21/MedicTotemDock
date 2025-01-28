@@ -1,0 +1,29 @@
+<div class="head-container">
+    <a href="/secttwocura"><button class="back-button">⬅ Volver</button></a>
+    <br><span>Elija la cita(s) a confirmar:</span>
+</div>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Cita</th>
+                <th>Médico a cargo</th>
+                <th>Fecha</th>
+                <th>Confirmar hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cita of citas">
+                <td>{{ cita.Tipo_Atencion}}</td>
+                <td>{{ cita.RutProfesional}}</td>
+                <td>{{ cita.Fecha_Cita}}</td>
+                <td>
+                    <input type="checkbox" [checked]="cita.estado === 'Completado'" [disabled]=" cita.estado === 'Completado' || casillaBloqueada" (change)="cambiarEstado(cita)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/secttwoprint"><button class="print-button" (click)="guardarCambios()">Aceptar</button></a>
+</div>

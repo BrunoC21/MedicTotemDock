@@ -1,0 +1,29 @@
+<div class="cita-container">
+  <!-- Lista de citas
+  <div *ngIf="citas.length > 0" class="citas-list">
+    <h2>Lista de Citas</h2>
+    <ul>
+      <li *ngFor="let cita of citas">
+        <strong>Estado:</strong> {{ cita.estado }} | 
+        <strong>Tipo:</strong> {{ cita.tipoAtencion }} | 
+        <strong>Hora:</strong> {{ cita.horaCita }} | 
+        <strong>Fecha:</strong> {{ cita.fechaCita }} | 
+        <strong>Sector:</strong> {{ cita.sector }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="citas.length === 0" class="no-citas">
+    <p>No hay citas registradas.</p>
+  </div>-->
+
+  <!-- Cargar archivo Excel -->
+  <div class="upload-section">
+    <h2>Subir Archivo Excel</h2>
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="cargarArchivo()">Cargar Archivo</button>
+  </div>
+
+  <!-- Mensajes -->
+  <div *ngIf="message" class="message success">{{ message }}</div>
+  <div *ngIf="error" class="message error">{{ error }}</div>
+</div>

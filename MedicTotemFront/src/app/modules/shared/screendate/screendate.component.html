@@ -1,0 +1,30 @@
+<body>
+  <div class="container">
+    <!-- Columna de llamados -->
+    <div class="column">
+      <div class="highlight">
+        <div class="label">Últimos llamados</div>
+      </div>
+      <div class="history">
+        <div *ngFor="let ticket of tickets" class="history-item">
+          <br>
+          <div class="code">ID: {{ ticket.hora_llamada }}</div>
+          <div class="name">{{ ticket.cita.paciente.nombre }} {{ ticket.cita.paciente.apellido }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna de boxes -->
+    <div class="column">
+      <div class="highlight">
+        <div class="label">Profesionales en Boxes</div>
+      </div>
+      <div class="history">
+        <div *ngFor="let ticket of tickets" class="history-item-bottom">
+          <div class="box">{{ ticket.cita.profesional.box.nombre }}</div>
+          <div class="name">Dr(a) {{ ticket.cita.profesional.nombre }} {{ ticket.cita.profesional.apellido }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

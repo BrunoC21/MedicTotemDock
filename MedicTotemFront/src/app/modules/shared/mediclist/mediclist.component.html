@@ -1,0 +1,61 @@
+<div id="registerModal" *ngIf="isModalVisible" class="modal">
+    <div class="form-container">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h2>Bienvenido</h2>
+      <form (ngSubmit)="confirmarBox()">
+        <label for="boxSelect">Sala/Box</label>
+        <select id="boxSelect" [(ngModel)]="boxId" name="boxSelect" required>
+          <option *ngFor="let box of boxs" [value]="box.id">{{ box.nombre }}</option>
+        </select>
+        <button type="submit" class="boxbutton">Confirmar</button>
+      </form>
+    </div>
+</div>
+
+<body>
+    <div class="col-md-12">
+      <div class="card card-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Confirmar/Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cita of Citas">
+                    <td>{{ cita.paciente.nombre}} {{ cita.paciente.apellido}}</td>
+                    <td>{{ cita.fechaCita}} / {{ cita.horaCita}}</td>
+                    <td>{{ cita.estado}}</td>
+                    <td>
+                        <button class="call-button" (click)="llamarCita(cita.id)">Llamar</button>
+                        <button class="done-button" (click)="terminarCita(cita.id)">Terminar</button>
+                        <button class="drop-button" (click)="terminarCitaPerdido(cita.id)">Perdido</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+        // Referencia al modal y botones
+        const modal = document.getElementById('registerModal');
+        const acceptButton = document.getElementById('btnRegistrar');
+        const closeModal = document.getElementById('closeModal');
+
+        // Cerrar el modal al hacer clic en "Confirmar"
+        acceptButton.addEventListener('click', () => {
+          modal.style.display = 'none'; // Ocultar el modal
+        });
+
+        // También cerrar el modal al hacer clic en la "X"
+        closeModal.addEventListener('click', () => {
+          modal.style.display = 'none'; // Ocultar el modal
+        });
+      </script>
+</body>
+

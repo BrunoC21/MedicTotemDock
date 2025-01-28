@@ -1,0 +1,68 @@
+<div id="app">
+  <nav id="navbar" class="navbar navbar-expand navbar-dark" *ngIf="showNavbar">
+    <a href="#" class="navbar-brand"> CESFAM </a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/homeoption" class="nav-link text-light" routerLink="homeoption">Home </a>
+      </li>
+      <li class="nav-item">
+        <a href="/sectonehome" class="nav-link text-light" routerLink="sectonehome">Sector 1 </a>
+      </li>
+      <li class="nav-item">
+        <a href="/secttwohome" class="nav-link text-light" routerLink="secttwohome">Sector 2 </a>
+      </li>
+      <li class="nav-item">
+        <a href="/sectfourhome" class="nav-link text-light" routerLink="sectfourhome">Sector 4 </a>
+      </li>
+      <li class="nav-item">
+        <a href="/sectfivehome" class="nav-link text-light" routerLink="sectfivehome">Sector 5 </a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link text-light" *ngIf="isLoggedIn" routerLink="admin">Admin </a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/visador" class="nav-link text-light" routerLink="visador">Visador </a>
+      </li>
+      <li class="nav-item">
+        <a href="/evaluador" class="nav-link text-light" *ngIf="isLoggedIn" routerLink="evaluador">Evaluador</a>
+      </li>
+      <li class="nav-item">
+        <a href="/mediclist" class="nav-link text-light" *ngIf="isLoggedIn" routerLink="mediclist">mediclist</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/login" class="nav-link text-light" routerLink="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a href="/register" class="nav-link text-light" routerLink="register">Registrar</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link text-light" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link text-light" routerLink="home" (click)="logout()">Salir</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Nueva estructura -->
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="logo cesfam" class="logocesfam">
+    </div>
+    
+    <div class="clock-container">
+      <p class="date">{{ currentDate }}</p>
+      <p class="clock">{{ currentTime }}</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

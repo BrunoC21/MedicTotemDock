@@ -1,0 +1,25 @@
+<!-- editar-perfil.component.html -->
+<div>
+    <h2>Editar Perfil</h2>
+    <p>Si no quiere modificar algun dato solo dejelo en blanco</p>
+    <form #formulario="ngForm">
+      <div>
+        <label for="username">Nombre de Usuario</label>
+        <input type="text" id="username" name="username" [(ngModel)]="usuario.username" placeholder="{{placeholderUsername}}" />
+      </div>
+  
+      <div>
+        <label for="email">Correo Electrónico</label>
+        <input type="text" id="email" name="email" [(ngModel)]="usuario.email" placeholder="{{placeholderEmail}}" />
+      </div>
+  
+      <div>
+        <label for="password">Nueva contraseña</label>
+        <input type="password" id="password" name="password" [(ngModel)]="usuario.password" placeholder="******" />
+      </div>
+
+      <p>Esta acción hara que se cierre la sesión</p>
+
+      <button type="button" (click)="guardarCambios()">Guardar Cambios</button>
+    </form>
+</div>

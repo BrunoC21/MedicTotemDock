@@ -1,0 +1,35 @@
+<div class="head-container">
+    <span>Sector 5<br>
+      Bienvenido/a al Centro de Salud Familiar Violeta Parra 
+    </span>
+    <h2>Por favor, ingrese su rut o seleccion SAR para continuar</h2>
+  </div>
+  
+  <div class="container">
+    <div class="input-container">
+      <span class="icon">👤</span>
+      <input type="text" id="inputField" readonly>
+    </div>
+    <div class="wrong-container" *ngIf="!rutCorrecto"> ⓘ El rut ingresado es incorrecto.</div>
+    <div class="keyboard">
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="key">K</button>
+      <button class="key">0</button>
+      <button class="key backspace">⟵</button>
+    </div>
+    <a><button class="submit-button" (click)="guardarRut()">Ingresar ➔</button></a>
+  
+    <a href="/sectfiveprint"><button class="sar-button">SAR ➔</button></a>
+    <a href="/sectfiveprint"><button class="cesfam-button">Ingreso a CESFAM ➔</button></a>
+  </div>
+  
+  <div class="separador"></div>
+  

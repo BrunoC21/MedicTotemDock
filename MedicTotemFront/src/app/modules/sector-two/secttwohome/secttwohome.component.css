@@ -1,0 +1,126 @@
+.head-container{
+    font-size: 25px;
+    margin-top: 30px;
+    text-align: center;
+    color: blue;
+  }
+
+  .head-container h2{
+    font-size: 15px;
+    margin-top: 30px;
+    color: grey;
+  }
+
+  .container {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-top: 55px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background: #fff;
+  }
+  
+  .icon {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+  
+  #inputField {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .key {
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    background: #bbb;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .key:active {
+    background: #999;
+  }
+  
+  .backspace {
+    background: #e74c3c;
+  }
+  
+  .submit-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:active,
+  .sar-button:active,
+  .cesfam-button:active {
+    background: #0056b3;
+  }
+
+  .sar-button {
+    display: flex;
+    width: 150px;
+    margin: 25px 55px;
+    margin-left: 60px;
+    font-size: 18px;
+    padding: 10px 45px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cesfam-button {
+    display: flex;
+    width: 275px;
+    margin: 25px 55px;
+    margin-left: 5px;
+    font-size: 18px;
+    padding: 10px 50px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .wrong-container {
+    background-color: red;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 270px;
+    border-radius: 5px;
+  }
+
+  .separador{
+    height: 50px;
+  }
+  

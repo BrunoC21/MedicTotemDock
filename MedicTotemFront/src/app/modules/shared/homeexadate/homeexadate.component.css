@@ -1,0 +1,61 @@
+  .head-container{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: blue;
+  }
+
+  .back-button{
+    text-align: left;
+    margin-top: 10px;
+    margin-left: -500px;
+    font-size: 12px;
+    padding: 15px 10px;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .container {
+    text-align: center;
+    width: 400px;
+    margin: 275px;
+    margin-top: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 150%;
+  }
+
+  th, td {
+    width: 50px;
+    font-size: 12px;
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    font-size: 10px;
+    background-color: #f2f2f2;
+  }
+
+  .print-button{
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 150px;
+    font-size: 18px;
+    padding: 15px 70px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .print-button:active{
+    background: #0056b3;
+  }

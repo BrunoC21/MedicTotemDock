@@ -1,0 +1,47 @@
+.head-container{
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: blue;
+}
+
+.back-button{
+  text-align: left;
+  margin-top: 10px;
+  margin-left: -500px;
+  font-size: 12px;
+  padding: 15px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+  .container {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .eco-button, 
+  .pie-button {
+    width: 300px;
+    margin-block: 20px;
+    font-size: 18px;
+    padding: 30px 20px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .eco-button:active, 
+  .pie-button:active {
+    background: #0056b3;
+  }
+
+  .separador{
+    height: 50px;
+  }

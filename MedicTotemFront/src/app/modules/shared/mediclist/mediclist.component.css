@@ -1,0 +1,194 @@
+body {
+   background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); 
+   height: 100vh;
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   z-index: -1;
+ }
+ 
+ body::before {
+   background-image: url("src/assets/fondo.jpg");
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: cover;
+   content: "";
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0.4;
+ }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card-container.card {
+   height: 650px;
+    max-height: 650px;
+    max-width: 1000px !important;
+    max-height: 500px;
+    padding: 40px 40px;
+    overflow-y: auto; /* Opcional: Oculta el desbordamiento vertical */
+    white-space: nowrap; /* Evita que la tabla se desborde */
+    z-index: 1;
+  }
+  
+  .card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    table-layout: auto;
+  }
+
+  th, td {
+    width: 50px;
+    font-size: 12px;
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+  }
+
+  
+  th {
+    font-size: 10px;
+    background-color: #f2f2f2;
+  }
+
+  .call-button,
+  .done-button,
+  .drop-button {
+    width: 100px;
+    margin-left: 30px;
+    font-size: 10px;
+    padding: 15px 20px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .call-button:active,
+  .done-button:active,
+  .drop-button:active {
+    background: #0056b3;
+  }
+
+  #registerModal {
+   display: block;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+#userForm{
+   height: 25vh;
+   margin-top: 2vh;
+   margin-left: 1vw;
+   background-color: transparent;
+}
+
+ /* Adaptar el diseño del formulario */
+.form-container {
+   top: 150px;
+   width: 50vw;
+   height: 40vh;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5vh;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   border-radius: 1em;
+   background-color: blue;
+   position: relative;
+}
+
+.form-container h2 {
+   height: 12vh;
+   line-height: 12vh;
+   text-align: center;
+   font-size: 1.5vw;
+   color: white;
+   background-color: transparent;
+}
+
+.form-container label{
+   display: block;
+   margin: 0.5rem auto;
+   margin-left: 100px;
+   color: white;
+   background-color: transparent;
+   position: relative;
+}
+
+.form-container select {
+   width: 150px;
+   height: 30px;
+   display: block;
+   margin: 0.2rem auto;
+   background-color: white;
+   position: relative;
+}
+
+select {
+   width: 23vw;
+   height: 1vh;
+   border-radius: 1em;
+   border: 0.2em solid #ccc;
+}
+
+#role{
+   width: 25vw;
+   height: 4vh;
+   line-height: 3vh;
+   margin-left: 2vw;
+   background-color: white;
+}
+
+.boxbutton {
+   width: 50%;
+   height: 5vh;
+   border: none;
+   border-radius: 1em;
+   font-size: 1rem;
+   cursor: pointer;
+   background-color: white;
+   color: black;
+   display: block;
+   margin: 2rem auto;
+}
+
+.boxbutton:hover {
+   background-color: rgb(201, 201, 201);
+}
+
+ /* Botón cerrar */
+.close {
+   color: white;
+   background-color: transparent;
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   font-size: 1.5rem;
+   cursor: pointer;
+}

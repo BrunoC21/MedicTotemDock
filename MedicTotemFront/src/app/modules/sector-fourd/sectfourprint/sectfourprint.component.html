@@ -1,0 +1,28 @@
+<div class="ticket-container" *ngIf="ticketNumber !== null" id="printableArea">
+    <div class="ticket-header">
+      <img src="assets/logo.png" alt="Logo" class="ticket-logo" />
+      <div class="ticket-header-info">
+        <p>{{ currentDate | date: 'dd/MM/yyyy' }}</p>
+        <p>{{ currentTime | date: 'HH:mm:ss' }}</p>
+        <p>Sector X</p>
+      </div>
+    </div>
+  
+    <hr />
+  
+    <div class="ticket-body">
+      <h1>A {{ ticketNumber }}</h1>
+      <h2>Citación</h2>
+    </div>
+  
+    <hr />
+  
+    <div class="ticket-footer">
+      <p>Fecha: {{ currentDate | date: 'dd-MM-yyyy' }}</p>
+      <p>Hora: {{ citaHora }}</p>
+      <p>RUT: {{ clienteRut }}</p>
+    </div>
+  </div>
+  
+  <a href="/sectfourdone"><button (click)="printTicket()" class="print-button">Imprimir Ticket</button></a>
+  

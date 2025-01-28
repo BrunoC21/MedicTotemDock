@@ -1,0 +1,12 @@
+  .head-container{
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: blue;
+  }
+  
+  .container {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+  }

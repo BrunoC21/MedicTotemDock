@@ -1,0 +1,20 @@
+<!-- admin-roles.component.html -->
+<h3>Roles del Usuario</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Rol</th>
+      <th>Tiene</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rol of rolesToDisplay">
+      <td>{{ rol.substring(5) }}</td>
+      <td>
+        <input type="checkbox" [checked]="rolesToCheck.includes(rol)" (change)="toggleRole(rol)" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="guardarRoles()">Guardar</button>

@@ -1,0 +1,37 @@
+  .bg-medic{
+    background-color: blue;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logocesfam {
+    width: 100px;
+    height: auto;
+  }
+  
+  .clock-container {
+    text-align: right;
+    font-family: Arial, sans-serif;
+  }
+  
+  .date, .clock {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .date {
+    font-weight: bold;
+  }
+  
